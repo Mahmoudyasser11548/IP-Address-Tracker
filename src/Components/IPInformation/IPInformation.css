@@ -1,0 +1,118 @@
+.info-map {
+  background: url(../../assets/imgs/pattern-bg.png);
+  padding: calc(var(--padding) + 10px) 0;
+  height: 230px;
+  position: relative;
+}
+
+.title {
+  text-align: center;
+  color: var(--white);
+  font-style: italic;
+  margin-bottom: var(--padding);
+}
+
+form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 350px;
+  margin: auto;
+  margin-bottom: var(--padding);
+  background-color: var(--white);
+  border-radius: 10px;
+}
+
+form input {
+  flex: 1;
+  border: none;
+  color: var(--Very-Dark-Gray);
+  padding: 8px 15px;
+}
+
+form input:focus {
+  outline: none;
+}
+
+form .search-btn {
+  background-color: transparent;
+  cursor: pointer;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 0 10px 10px 0;
+  background-color: var(--Very-Dark-Gray);
+  color: var(--white);
+}
+
+.box-info {
+  width: 800px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  top: 140px;
+  left: 50%;
+  z-index: 9999;
+  transform: translateX(-50%);
+  background-color: var(--white);
+  border-radius: 12px;
+  padding: calc(var(--padding) + 10px) 15px;
+  box-shadow: 5px 5px 15px -5px var(--Dark-Gray);
+}
+
+.box-info .box {
+  flex-basis: 25%;
+  padding: calc(var(--padding) / 2) calc(var(--padding) + 10px);
+  height: 100px;
+}
+
+.box-info .box h6 {
+  color: var(--Dark-Gray);
+  margin-bottom: calc(var(--padding) / 2);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.box-info .box span {
+  color: var(--Very-Dark-Gray);
+  margin-bottom: calc(var(--padding) / 2);
+  font-size: var(--font-size-large);
+  font-weight: var(--font-weight-semi-bold);
+}
+
+.box:not(:last-child) {
+  border-right: 1px solid var(--Dark-Gray);
+}
+
+@media only screen and (max-width: 767px) {
+  .title {
+    font-size: var(--font-size-medium);
+    margin-bottom: calc(var(--padding) / 2)
+  }
+
+  form {
+    width: 300px;
+  }
+
+  .box-info {
+    width: 300px;
+    flex-direction: column;
+    padding: calc(var(--padding)/ 2);
+    top: 110px;
+  }
+
+  .box {
+    flex-basis: 100%;
+    text-align: center;
+    padding: calc(var(--padding) / 2);
+  }
+
+  .box-info .box span {
+    font-size: var(--font-size-medium);
+  }
+
+  .box:not(:last-child) {
+    border-right: none;
+  }
+}
